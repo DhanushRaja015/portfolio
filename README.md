@@ -1,4 +1,4 @@
-# Akash Kumar Portfolio
+# Dhanush Raja T Portfolio
 
 A production-ready, interview-grade portfolio website built with React, TypeScript, Tailwind CSS, and Framer Motion. Features a bold black-and-white editorial design inspired by high-end systems engineering aesthetics.
 
@@ -36,7 +36,7 @@ A production-ready, interview-grade portfolio website built with React, TypeScri
 
 ```bash
 # Clone or extract the project
-cd akash-portfolio
+cd portfolio
 
 # Install dependencies
 npm install
@@ -64,7 +64,7 @@ npm run preview
 ## Project Structure
 
 ```
-akash-portfolio/
+portfolio/
 ├── public/                 # Static assets
 ├── src/
 │   ├── App.tsx            # Main application component
@@ -149,10 +149,10 @@ MIT License - feel free to use this template for your own portfolio.
 ## Contact
 
 For questions or collaboration:
-- Email: akash.kumar.devs@gmail.com
-- LinkedIn: [Your LinkedIn]
-- GitHub: [Your GitHub]
+- Email: dhanushrajathamarai.015@gmail.com
+- LinkedIn: [Dhanush Raja T](https://www.linkedin.com/in/dhanush-raja-t-85a8602bb)
+- GitHub: [dhanushraja015](https://github.com/dhanushraja015)
 
 ---
 
-Built with precision by Akash Kumar | Opsora Systems
+Built with precision by Dhanush Raja T
