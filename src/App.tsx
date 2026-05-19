@@ -67,7 +67,7 @@ const PROJECTS: Project[] = [
     subtitle: 'Hands-free computer control using AI-powered gaze and head tracking with MediaPipe. Supports blink-based clicks, drag-and-drop, scrolling, and voice commands.',
     tags: ['PYTHON', 'MEDIAPIPE', 'OPENCV', 'AI/ML', 'ACCESSIBILITY'],
     image: 'eye-tracking.png',
-    link: 'https://github.com/DhanushRaja015/Eye-Tracking',
+    link: 'https://dhanushraja015.github.io/Eye-Tracking/',
     status: 'COMPLETED',
     statusColor: 'text-green-500',
     statusIcon: <Check size={12} />
