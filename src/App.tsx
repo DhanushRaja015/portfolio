@@ -8,7 +8,6 @@ import {
   ArrowRight, 
   Check,
   Terminal,
-  Cpu,
   Zap,
   Eye,
   Menu,
