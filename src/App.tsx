@@ -9,8 +9,8 @@ import {
   Check,
   Terminal,
   Cpu,
-  Shield,
   Zap,
+  Eye,
   Menu,
   X,
   Send
@@ -63,12 +63,23 @@ interface Commitment {
 // ============================================
 const PROJECTS: Project[] = [
   {
+    id: 'eye-tracking',
+    title: 'AI EYE TRACKING MOUSE',
+    subtitle: 'Hands-free computer control using AI-powered gaze and head tracking with MediaPipe. Supports blink-based clicks, drag-and-drop, scrolling, and voice commands.',
+    tags: ['PYTHON', 'MEDIAPIPE', 'OPENCV', 'AI/ML', 'ACCESSIBILITY'],
+    image: 'eye-tracking.png',
+    link: 'https://github.com/DhanushRaja015/Eye-Tracking',
+    status: 'COMPLETED',
+    statusColor: 'text-green-500',
+    statusIcon: <Check size={12} />
+  },
+  {
     id: 'ai-vision',
     title: 'AI-VISION ASSISTANT',
     subtitle: 'Captures screenshots of inaccessible UI elements, sends them to OpenAI Vision API, and generates keyboard-navigable alternatives. Built for Vision-Aid NGO.',
     tags: ['PYTHON', 'NVDA', 'WXPYTHON', 'PILLOW', 'OPENAI'],
-    image: '/nvda-logo.png',
-    link: '#',
+    image: 'nvda-logo.png',
+    link: 'https://hackathon.visionaid.org/',
     status: 'COMPLETED',
     statusColor: 'text-green-500',
     statusIcon: <Check size={12} />
@@ -89,7 +100,7 @@ const PROJECTS: Project[] = [
     title: 'EV CHARGING CALCULATOR',
     subtitle: 'Calculator and analyzer tool designed to monitor and optimize EV charging metrics, power consumption, and cost efficiency.',
     tags: ['SOFTWARE DEV', 'UI/UX', 'ANALYSIS', 'EV TECH'],
-    image: '/ev-charging.png',
+    image: 'ev-charging.png',
     link: 'https://dhanushraja015.github.io/Mini-Project/',
     status: 'COMPLETED',
     statusColor: 'text-green-500',
@@ -101,19 +112,26 @@ const BLOG_POSTS: BlogPost[] = [
   {
     id: '1',
     year: '2026',
+    title: 'AI-POWERED EYE TRACKING FOR HANDS-FREE COMPUTER CONTROL',
+    excerpt: 'How MediaPipe face landmarks and gaze estimation enable cursor control, blink-based clicking, and voice commands for accessibility.',
+    link: 'https://github.com/DhanushRaja015/Eye-Tracking'
+  },
+  {
+    id: '2',
+    year: '2026',
     title: 'BUILDING AN OPEN-SOURCE AI VISION ASSISTANT FOR VISUALLY IMPAIRED USERS',
     excerpt: 'How computer vision and OpenAI models can make inaccessible software interfaces navigable for VI users.',
     link: '#'
   },
   {
-    id: '2',
+    id: '3',
     year: '2026',
     title: 'DESIGNING A CANTEEN ERP SYSTEM FOR SAIL STEEL PLANT',
     excerpt: 'Building a full-stack ERP solution handling inventory, food preparation, distribution and sales management.',
     link: '#'
   },
   {
-    id: '3',
+    id: '4',
     year: '2026',
     title: 'DEVELOPING A DATA-DRIVEN EV CHARGING CALCULATOR AND ANALYZER',
     excerpt: 'A deep dive into analyzing power consumption, calculating cost efficiency, and optimizing EV charging workflows.',
@@ -148,8 +166,8 @@ const SKILL_CATEGORIES: SkillCategory[] = [
     skills: [
       { name: 'Generative AI', icon: 'AI' },
       { name: 'OpenAI API', icon: 'O' },
-      { name: 'HTML & CSS', icon: 'H' },
-      { name: 'NVDA', icon: 'N' }
+      { name: 'MediaPipe', icon: 'MP' },
+      { name: 'OpenCV', icon: 'CV' }
     ]
   }
 ];
@@ -163,18 +181,18 @@ const COMMITMENTS: Commitment[] = [
     outcome: 'OPEN-SOURCE AI-VISION ASSISTANT ENABLING VI USERS TO INTERACT WITH ANY SOFTWARE INTERFACE.'
   },
   {
+    icon: <Eye size={24} />,
+    title: 'AI COMPUTER VISION',
+    subtitle: 'INNOVATION STANDARD',
+    desc: 'Leveraging MediaPipe face landmarks and gaze estimation for hands-free, accessible computer control.',
+    outcome: 'EYE TRACKING MOUSE SYSTEM WITH BLINK CLICKS, HEAD TRACKING, AND VOICE COMMANDS.'
+  },
+  {
     icon: <Zap size={24} />,
     title: 'CLEAN CODE PRACTICES',
     subtitle: 'DEVELOPMENT STANDARD',
     desc: 'Writing efficient, maintainable, and logical code that solves real-world problems effectively.',
     outcome: 'PRODUCTION-READY ERP SYSTEMS AND AI TOOLS BUILT WITH SCALABILITY AND CLARITY IN MIND.'
-  },
-  {
-    icon: <Cpu size={24} />,
-    title: 'EV CHARGING ANALYTICS',
-    subtitle: 'PERFORMANCE STANDARD',
-    desc: 'Calculating and analyzing EV charging efficiency, costs, and power metrics to optimize consumption.',
-    outcome: 'DATA-DRIVEN CALCULATOR AND ANALYZER FOR OPTIMIZED EV CHARGING AND COST EFFICIENCY.'
   }
 ];
 
@@ -232,7 +250,7 @@ const Navigation = () => {
             <Github size={18} />
           </a>
           <a 
-              href="/resume.pdf"
+              href="resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="border-2 border-black px-6 py-2 text-xs font-bold tracking-widest hover:bg-black hover:text-white transition-all uppercase inline-block"
@@ -303,7 +321,7 @@ const Hero = () => {
             </div>
 
             <h1 className="text-[5rem] md:text-[7rem] lg:text-[9rem] font-black leading-[0.85] tracking-tighter mb-8 text-black">
-              <span className="italic pr-4">HI, I'M</span><br />DHANUSH
+              <span className="italic pr-4">HI<span className="text-[0.6em]">,</span> I'M</span><br />DHANUSH
             </h1>
             
             <div className="flex flex-wrap items-center gap-4 mb-6">
@@ -316,7 +334,7 @@ const Hero = () => {
             </div>
             
             <p className="text-gray-400 text-xs font-bold tracking-widest uppercase mb-6">
-              BASED IN KOMARAPALAYAM, TN
+              BASED IN SALEM, TN
             </p>
 
             <p className="text-gray-500 text-lg leading-relaxed mb-10 max-w-lg">
@@ -344,7 +362,7 @@ const Hero = () => {
               
               <div className="relative z-10 border-2 border-black bg-white">
                 <img 
-                  src="/profile.jpeg" 
+                  src="profile.jpeg" 
                   alt="Dhanush Raja T"
                   className="w-full h-auto grayscale hover:grayscale-0 contrast-125 transition-all duration-500 cursor-pointer"
                 />
@@ -352,7 +370,7 @@ const Hero = () => {
 
               <div className="absolute -right-8 top-12 flex flex-col gap-4 z-20 hidden md:flex">
                 <div className="bg-white border-2 border-black py-4 px-6 text-center shadow-sm">
-                  <p className="text-2xl font-black">2+</p>
+                  <p className="text-2xl font-black">3+</p>
                   <p className="text-[10px] font-bold text-gray-400 tracking-widest uppercase mt-1">PROJECTS</p>
                 </div>
 
@@ -390,12 +408,10 @@ const About = () => {
               <div className="border-l-4 border-white pl-6 mb-8">
                 <h2 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none">
                   ABOUT<br />
-                  <span className="text-stroke-white">ME</span>
+                  <span className="text-gray-400">ME</span>
                 </h2>
               </div>
-              <p className="text-xs font-bold tracking-widest text-gray-500 uppercase pl-6">
-                PROTOCOL // SYSTEM ARCHITECTURE
-              </p>
+
             </div>
           </motion.div>
 
@@ -457,12 +473,12 @@ const Projects = () => {
         >
           <h2 className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter leading-none mb-4">
             <span className="text-gray-600">ACTIVE</span><br />
-            <span className="text-stroke-white">PROJECTS</span>
+            <span className="text-gray-400">PROJECTS</span>
           </h2>
           <div className="h-1 bg-red-600 w-32" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {PROJECTS.map((project, index) => (
             <motion.div
               key={project.id}
@@ -530,7 +546,7 @@ const TechStack = () => {
         >
           <h2 className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter leading-none">
             <span className="border-l-8 border-black pl-6">TECH</span>{' '}
-            <span className="text-stroke-black">STACK</span>
+            <span className="text-gray-300">STACK</span>
           </h2>
         </motion.div>
 
@@ -567,7 +583,7 @@ const CoreCommitments = () => {
           viewport={{ once: true }}
           className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tighter mb-20"
         >
-          CORE <span className="text-stroke-white">COMMITMENTS</span>
+          CORE <span className="text-gray-400">COMMITMENTS</span>
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -622,7 +638,7 @@ const Blog = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tighter"
           >
-            TECHNICAL <span className="text-transparent italic text-stroke-white">LOGS</span>
+            TECHNICAL <span className="text-gray-400 italic">LOGS</span>
           </motion.h2>
           <span className="text-xs font-bold tracking-widest text-gray-500 uppercase mb-4">
             LIVE MEDIUM SYNC // REGISTRY. V.02
@@ -731,7 +747,7 @@ const Contact = () => {
             </form>
 
             <a 
-              href="/resume.pdf"
+              href="resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full bg-white text-black border-2 border-black py-4 px-8 flex items-center justify-center gap-4 hover:bg-gray-100 transition-colors group"
@@ -745,7 +761,7 @@ const Contact = () => {
         </div>
 
         <div className="mt-32 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold tracking-widest text-gray-500 uppercase">
-          <span>KOMARAPALAYAM // INDIA</span>
+          <span>SALEM // INDIA</span>
           <span>© 2026 DHANUSH_SYSTEMS</span>
           <span>VOL. 01 PAGE 404</span>
         </div>
